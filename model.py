@@ -41,10 +41,4 @@ class Igra():
                 self.moz_pos.append((x,y))
                 self.moz_pos_izpis.append((x+1,y+1))
 
-    #Druge metode
-
-
-
-    #Program
-
 
