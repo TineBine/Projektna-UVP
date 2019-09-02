@@ -1,9 +1,26 @@
 <html>
 <head>
-    <title>Skakačev sprehod</title>
+    <title>Konjev sprehod</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            width:40px;
+            height:40px;
+            text-align: center;
+        }
+        th {
+            background-color:#994d00;
+        }
+        p {
+            font-family: verdana;
+        }
+    </style>
 </head>
 
-<body>
+<body style="background-color:#ffeb99">
     <h1>Skakačev sprehod</h1>
 
     % if vnos == False:
@@ -13,15 +30,35 @@
         Vnesite veljavno potezo!
         </p>
     % end
-    <p>
-        % for i in range(dim):
-            % for j in range(dim):
-                {{sah[i][j]}};&nbsp
-            % end
-            <br>
-        % end
-    </p>
 
+    <table>
+        <tr>
+        <th>/</th>
+        % for i in range (dim):
+            <th>{{i+1}}</th>
+        % end
+        </tr>
+        % for i in range (dim):
+            <tr>
+            <th>{{i+1}}</th>
+            % for j in range (dim):
+                % if (i+j)%2==0:
+                    % if sah[i][j] == 'K':
+                        <td style="background-color:#ffd9b3">♞</td>
+                    % else:
+                        <td style="background-color:#ffd9b3">{{sah[i][j]}}</td>    
+                    % end
+                % else:
+                    % if sah[i][j] == 'K':
+                        <td style="background-color:#ff8000">♞</td>
+                    % else:
+                        <td style="background-color:#ff8000">{{sah[i][j]}}</td>   
+                    % end
+                % end
+            % end
+            </tr>
+        % end
+    </table>
     <p>
         Možne poteze (vrstica, stolpec):
         <br>
