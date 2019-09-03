@@ -8,7 +8,7 @@
             Najprej vnesite dimenzijo šahovnice, nato pa veljaven položaj konja.<br>
             Glede na dimenzijo boste imeli na vrhu in na levi strani ustrezno<br>
             oštevilčene stolpce in vrstice. Zgornje levo polje ima koordinate (1, 1),<br>
-            podnje desno pa (dim, dim).
+            spodnje desno pa (dim, dim).
         </p>
         <br>
 
