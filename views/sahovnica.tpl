@@ -21,7 +21,7 @@
 </head>
 
 <body style="background-color:#ffeb99">
-    <h1>Skakačev sprehod</h1>
+    <h1>Konjev sprehod</h1>
 
     % if vnos == False:
         <p> 
