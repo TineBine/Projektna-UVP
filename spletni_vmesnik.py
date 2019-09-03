@@ -16,6 +16,8 @@ def setup():
             dim = 'a'
         x = int(bottle.request.query['x'])
         y = int(bottle.request.query['y'])
+        if x < 1 or y < 1:
+            x = 'b'
         igra.inicializacija(dim,x,y)
     except:
        return bottle.template('zacetna.tpl')
@@ -59,7 +61,7 @@ def update():
         
 
 @bottle.get('/konec')
-def game():
+def konec():
     zmaga = bool(bottle.request.query['zmaga'])
     return bottle.template('konec.tpl', zmaga = zmaga, dim = igra.dim, sah = igra.sahovnica)
 

@@ -5,8 +5,9 @@ class Igra():
     pos = []
     moz_pos = []
     moz_pos_izpis = []
-    stare_pos = []
-    def __init__(self,d,x,y):
+    stare_pos = []        
+
+    def inicializacija(self,d,x,y):
         self.dim = d
         self.sahovnica = [[0 for i in range(self.dim)] for j in range(self.dim)]
         self.pos.clear()
@@ -52,6 +53,3 @@ class Igra():
             else:
                 self.moz_pos.append((x,y))
                 self.moz_pos_izpis.append((x+1,y+1))
-
-
-
